@@ -1,0 +1,43 @@
+{
+  "product": [
+    {
+      "name": "Rezen 9",
+      "img": "https://hanoicomputercdn.com/media/product/250_71002_cpu_amd_ryzen_9_7950x3d_4_2ghz_up_to_5__1_.jpg",
+      "code": "213SHDASJ2",
+      "cost": 8000000,
+      "status": "Còn hàng",
+      "id": 4
+    },
+    {
+      "name": "Bàn phím cơ không dây",
+      "img": "https://hanoicomputercdn.com/media/product/250_69247_ban_phim_co_khong_day_fl_esport_fl750_sam_marshmallow_rgb_gasket_mount_kailh_box_v2_brown_sw_usb_bluetooth_3mode_hotswap.jpg",
+      "code": "4GDSJQIFJJQ",
+      "cost": 500000,
+      "status": "Còn hàng",
+      "id": 5
+    },
+    {
+      "name": "PC Cấu hình cao",
+      "img": "https://hanoicomputercdn.com/media/product/250_70464_pcgm661_02.png",
+      "code": "231FDS",
+      "cost": 50000000,
+      "status": "Còn hàng",
+      "id": 6
+    }
+  ],
+  "service": [
+    {
+      "id": 1,
+      "img": "https://hanoicomputercdn.com/media/banner/06_Marab9c9a9b68aafe9f134303b322e153eb.png"
+    },
+    {
+      "id": 2,
+      "img": "https://hanoicomputercdn.com/media/banner/06_Mar18d83a01653d5cfea63359174a2ccc79.png"
+    },
+    {
+      "id": 3,
+      "img": "https://hanoicomputercdn.com/media/banner/09_Mar57e32133ea8f0bf6944590b0b4c79713.jpg"
+    }
+  ],
+  "history": []
+}
