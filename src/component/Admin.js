@@ -135,7 +135,15 @@ const Admin = () => {
     };
 
     const handleCancel = () => {
+        setIsRe(false)
         setIsModalOpen(false);
+        setAddData({
+            name: "",
+            img: "",
+            code: "",
+            cost: 0,
+            status: "Còn hàng",
+        })
     };
 
     const handleDelete = (data) => {

@@ -43,7 +43,6 @@ function Home() {
     return () => window.removeEventListener('scroll', updatePosition);
   }, []);
   const handleBuy = (data) => {
-    console.log(data);
     if (data.status === "Hết hàng") {
       message.error("Sản phẩm hiện đang hết hàng !")
     } {

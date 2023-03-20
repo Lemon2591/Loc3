@@ -23,6 +23,22 @@
       "cost": 50000000,
       "status": "Còn hàng",
       "id": 6
+    },
+    {
+      "name": "PC Gaming Tốc độ cao",
+      "img": "https://hanoicomputercdn.com/media/product/250_69405_pcgm638_01.jpg",
+      "code": "123FDSJ2",
+      "cost": 12580000,
+      "status": "Còn hàng",
+      "id": 7
+    },
+    {
+      "name": "Laptop Acer Gaming",
+      "img": "https://hanoicomputercdn.com/media/product/250_61622_laptop_acer_gaming_aspire_7_a715_42g_18.jpg",
+      "code": "27HDASD13",
+      "cost": 18588000,
+      "status": "Còn hàng",
+      "id": 8
     }
   ],
   "service": [

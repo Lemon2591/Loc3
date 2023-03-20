@@ -12,20 +12,6 @@ function Cart() {
     const [voucher, setVoucher] = useState("")
     const [down, setDown] = useState(0)
     const [isModalOpen, setIsModalOpen] = useState(false);
-    const [isLoading, setIsLoading] = useState(false)
-    const dataUser = JSON.parse(localStorage.getItem("userInfo"))
-    const [data, setData] = useState([])
-    const [addData, setAddData] = useState({
-        add: "",
-        phone: "",
-        mail: "",
-        idUser: dataUser.id,
-        cost: 0,
-        name: ""
-
-    });
-
-
     const [isVoucher, setIsVoucer] = useState(false)
 
     const lg = 1
@@ -39,13 +25,21 @@ function Cart() {
     }
 
     useEffect(() => {
-        const data = JSON.parse(localStorage.getItem("dataBuy"))
-        if (data !== null) {
-            setCart(data)
-            calc()
-        }
+        test()
     }, [])
 
+
+    const test = () => {
+        console.log("object");
+        const data = JSON.parse(localStorage.getItem("dataBuy"))
+        if (data !== null) {
+            setCart([...data])
+            calc()
+        }
+        else {
+            setCart([])
+        }
+    }
 
     useEffect(() => {
         calc()
@@ -53,9 +47,6 @@ function Cart() {
 
     const deleteItem = (data) => {
         if (cart?.length > 1) {
-            // _.remove(cart, (e) => {
-            //     return e.id === data.id
-            // })
             cart.splice(data, 1)
             setCart([...cart])
             localStorage.setItem("dataBuy", JSON.stringify(cart))
@@ -97,40 +88,14 @@ function Cart() {
 
 
     return (
-        <>  {
-            isLoading ? <Loading /> : null
-        }
+        <>
             <Modal
                 title="Đặt mua sản phẩm"
                 open={isModalOpen}
                 onOk={handleOk}
                 onCancel={handleCancel}
             >
-                <Input
-                    value={addData.name}
-                    style={{ margin: "20px 0" }}
-                    placeholder="Nhập địa chỉ"
-                    onChange={(e) => {
-                        setAddData((pre) => {
-                            return { ...pre, name: e.target.value };
-                        });
-                    }}
-                />
-                <Input style={{ margin: "20px 0" }} placeholder="Nhập số điện thoại..."
-                    value={addData.cost === 0 ? "" : addData.cost}
-                    type="number"
-                    onChange={(e) => {
-                        setAddData((pre) => {
-                            return { ...pre, cost: Number(e.target.value) };
-                        });
-                    }} />
-                <Input style={{ margin: "20px 0" }} placeholder="Nhập email..."
-                    value={addData.code}
-                    onChange={(e) => {
-                        setAddData((pre) => {
-                            return { ...pre, code: e.target.value.toLocaleUpperCase() };
-                        });
-                    }} />
+
 
             </Modal>
             <div className="cart-container">
@@ -220,7 +185,7 @@ function Cart() {
                                         })}
                                     </p>
                                 </div>
-                                <div className="buy" onClick={() => setIsModalOpen(true)}>
+                                <div className="buy" onClick={() => { message.success("Mua thành công !"); localStorage.removeItem("dataBuy"); test(); setStateMoney(0) }}>
                                     <button >Mua sản phẩm</button>
                                 </div>
                             </div>
