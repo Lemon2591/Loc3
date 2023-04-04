@@ -55,5 +55,13 @@
       "img": "https://hanoicomputercdn.com/media/banner/09_Mar57e32133ea8f0bf6944590b0b4c79713.jpg"
     }
   ],
-  "history": []
+  "history": [
+    {
+      "name": "Rezen 9",
+      "cost": 71080000,
+      "quantity": 4,
+      "code": "2IgnF1v2w9",
+      "id": 1
+    }
+  ]
 }
